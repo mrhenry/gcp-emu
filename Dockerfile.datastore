@@ -4,4 +4,4 @@ RUN apt-get -qq install -y google-cloud-sdk-datastore-emulator
 EXPOSE 8432/tcp
 VOLUME /data
 
-CMD gcloud beta emulators datastore start --data-dir=/data --store-on-disk --project=emu --host-port=localhost:8432
+CMD gcloud beta emulators datastore start --data-dir=/data --store-on-disk --project=emu --host-port=0.0.0.0:8432
